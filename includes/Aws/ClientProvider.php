@@ -17,7 +17,7 @@ class ClientProvider {
 
         // The SDK which creates clients.
         $this->sdk = new Sdk([
-            'credentials' => $credentials,
+            'credentials' => null,
             'endpoint' => $config->endpoint ?: null,
             'region' => $config->region,
             'version' => 'latest',

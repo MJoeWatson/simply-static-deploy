@@ -29,8 +29,8 @@ class Syncer {
         $clientProvider = new Aws\ClientProvider($this->config);
         $transferManager = new Aws\S3\TransferManager(
             $clientProvider->getS3Client(),
-            $this->config->bucket,
-            $this->config->bucket_acl ?: 'public-read',
+            $this->config->bucket ?: $_SERVER['HTTP_HOST'],
+            $this->config->bucket_acl ?: 'private',
             $path
         );
         $result = $transferManager->transfer();

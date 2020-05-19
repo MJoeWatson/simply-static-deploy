@@ -6,10 +6,7 @@ final class RequiredFields {
 
     const REQUIRED_FIELDS = [
         'aws' => [
-            'key',
-            'secret',
             'region',
-            'bucket',
         ],
         'url',
     ];
